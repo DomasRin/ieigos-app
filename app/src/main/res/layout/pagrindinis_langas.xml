@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:padding="24dp">
+
+    <!-- Pasisveikinimo tekstas -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sveiki!"
+        android:textSize="20sp"
+        android:textColor="#0D6EFD"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- NFC grupė, CENTRUOTA VISAI VERTIKALIAI -->
+    <LinearLayout
+        android:id="@+id/nfcGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <!-- NFC Skleidimo mygtukas -->
+        <ImageButton
+            android:id="@+id/startNfcButton"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/round_blue_button"
+            android:src="@drawable/ic_power"
+            android:scaleType="fitCenter"
+            android:tint="@android:color/white"
+            android:contentDescription="Pradėti NFC" />
+
+        <!-- NFC Tekstas -->
+        <TextView
+            android:id="@+id/nfcLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Pradėti NFC skleidimą"
+            android:textColor="#0D6EFD"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+
+    <!-- Atsijungimo mygtukas (vis dar apačioje) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logoutButton"
+        android:layout_width="309dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@android:color/white"
+        android:elevation="0dp"
+        android:stateListAnimator="@null"
+        android:text="Atsijungti"
+        android:textColor="#6C757D"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#E2E6EA"
+        app:strokeColor="#6C757D"
+        app:strokeWidth="2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:padding="24dp">
+
+    <!-- nustatymu mygtukas -->
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="0dp"
+        android:src="@drawable/ic_settings"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Keisti serverio URL"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- prisijungimo forma -->
+    <LinearLayout
+        android:id="@+id/loginForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/settingsButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prisijungimas"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#0D6EFD"
+            android:layout_marginBottom="24dp" />
+
+        <EditText
+            android:id="@+id/usernameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Naudotojo vardas"
+            android:backgroundTint="#CED4DA"
+            android:padding="12dp"
+            android:textColor="#212529"
+            android:textColorHint="#6C757D"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/passwordField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Slaptažodis"
+            android:inputType="textPassword"
+            android:backgroundTint="#CED4DA"
+            android:padding="12dp"
+            android:textColor="#212529"
+            android:textColorHint="#6C757D"
+            android:layout_marginBottom="24dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="10mm"
+            android:text="Prisijungti"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#0D6EFD"
+            app:cornerRadius="12dp"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

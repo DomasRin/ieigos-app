@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Tavo Prieiga</string>
+    <string name="server_base_url">http://182.144.0.20:3000</string>
+</resources>
