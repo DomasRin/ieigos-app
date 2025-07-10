@@ -39,7 +39,7 @@ Duomenų mainai: JSON formatas
 
 ---
 
-**Autorius:** [Tavo vardas]  
+**Autorius:** [Domas]  
 **Data:** 2025  
 
 
